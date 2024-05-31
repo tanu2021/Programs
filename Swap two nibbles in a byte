@@ -1,0 +1,15 @@
+
+#User function Template for python3
+class Solution:
+    def swapNibbles (self, n):
+        # code here 
+        p=bin(n)[2:]
+        p=str(p)
+        p=p.zfill(8)
+        n=len(p)
+        new = ""
+        for i in range(n//2, n):
+            new+=p[i]
+        for i in range(0,n//2):
+            new+=p[i]
+        return int(new,2)
