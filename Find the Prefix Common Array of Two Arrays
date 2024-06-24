@@ -1,0 +1,11 @@
+ def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
+        n=len(A)
+        arr=[0]*n
+        a=set()
+        b=set()
+        for i in range(n):
+            a.add(A[i])
+            b.add(B[i])
+            common = a.intersection(b)
+            arr[i]=len(common)
+        return arr
